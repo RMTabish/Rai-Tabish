@@ -7,7 +7,7 @@ const experiences = [
     company: "Knodemy",
     duration: "September 2024 - Present",
     description:
-      "Created curriculum on programming fundamentals and data structures for young learners. Developing a Learning Management System focusing on content delivery, UI/UX, and responsive design.",
+      "Created curriculum on programming fundamentals and data structures for young learners. Building an inhouse web-based Learning Management System in MERN stack with a focus on content delivery, collaboration, and responsive design.",
     type: "work",
   },
   {

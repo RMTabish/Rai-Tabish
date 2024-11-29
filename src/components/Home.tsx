@@ -59,11 +59,12 @@ export default function Home() {
         </div>
         <div className="relative">
           <div className="aspect-w-1 aspect-h-1">
-            <img
-              src="/nicatDP.jpeg"
-              alt="Coding workspace"
-              className="rounded-full shadow-xl object-cover w-65 h-65"
-            />
+          <img
+            src={`${import.meta.env.BASE_URL}nicatDP.jpeg`}
+            alt="Coding workspace"
+            className="rounded-full shadow-xl object-cover w-65 h-65"
+          />
+
           </div>
         </div>
       </motion.div>
@@ -88,8 +89,8 @@ export default function Home() {
           </div>
         </Link>
         <a
-          href="/rai tabish nov.pdf" 
-          download="Rai_Muhammad_Tabish_Resume.pdf" // Replace with the desired file name
+          href="/Rai Tabish Dec.pdf" 
+          download="Rai Tabish.pdf" 
           className="inline-flex items-center px-4 py-2 mt-4 border border-gray-600 text-gray-600 rounded-full hover:bg-gray-600 hover:text-white transition-colors duration-200 cursor-pointer group"
         >
           <span className="mr-2">Download Resume</span>
