@@ -89,25 +89,26 @@ export default function Home() {
           </div>
         </Link>
         <a
-          href={`${import.meta.env.BASE_URL}Rai Tabish Dec.pdf`}
-          download="Rai Tabish"
-          className="inline-flex items-center px-4 py-2 mt-4 border border-gray-600 text-gray-600 rounded-full hover:bg-gray-600 hover:text-white transition-colors duration-200 cursor-pointer group"
-        >
-          <span className="mr-2">Download Resume</span>
-          <svg
-            className="w-4 h-4 group-hover:translate-x-1 transition-transform duration-200"
-            fill="none"
-            stroke="currentColor"
-            viewBox="0 0 24 24"
-          >
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth={2}
-              d="M4 12l6 6M10 18l10-10"
-            />
-          </svg>
-        </a>
+  href={`${import.meta.env.BASE_URL}Rai Tabish.pdf`}
+  download="Rai Tabish.pdf"
+  className="inline-flex items-center px-4 py-2 mt-4 border border-gray-600 text-gray-600 rounded-full hover:bg-gray-600 hover:text-white transition-colors duration-200 cursor-pointer group"
+>
+  <span className="mr-2">Download Resume</span>
+  <svg
+    className="w-4 h-4 group-hover:translate-x-1 transition-transform duration-200"
+    fill="none"
+    stroke="currentColor"
+    viewBox="0 0 24 24"
+  >
+    <path
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      strokeWidth={2}
+      d="M4 12l6 6M10 18l10-10"
+    />
+  </svg>
+</a>
+
       </div>
     </div>
   );

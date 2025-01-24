@@ -3,11 +3,11 @@ import { Briefcase, GraduationCap } from 'lucide-react';
 
 const experiences = [
   {
-    title: "Technology Program Intern",
+    title: "Technology Developer",
     company: "Knodemy",
-    duration: "September 2024 - Present",
+    duration: "September 2024 - January-2025",
     description:
-      "Created curriculum on programming fundamentals and data structures for young learners. Building an inhouse web-based Learning Management System in MERN stack with a focus on content delivery, collaboration, and responsive design.",
+      "At Knodemy, I worked as a Full Stack Developer, contributing to the development of a Learning Management System (LMS). My role involved designing the architecture of the LMS and using the MERN stack to build its features. Additionally, I gained hands-on experience with AWS during the deployment phase, which enhanced my skills in software development. I had the privilege of collaborating with an exceptional team, which fostered both personal and professional growth. One of the most rewarding aspects of my role was mentoring young talent from underprivileged schools in Pakistan, helping them develop technical skills and fostering their potential.",
     type: "work",
   },
   {
@@ -51,14 +51,6 @@ const experiences = [
     type: "work",
   },
   {
-    title: "Game Development Intern",
-    company: "AirDev (Remote)",
-    duration: "January 2022 - April 2022",
-    description:
-      "Collaborated on a game development project using Unity, designing 3D assets in Blender. Built a Fruit Slicer game for Android and Windows, enhancing skills in game design and C# scripting.",
-    type: "work",
-  },
-  {
     title: "CS Lab Demonstrator",
     company: "FAST NUCES, Islamabad",
     duration: "January 2023 - November 2023",
@@ -86,7 +78,16 @@ const education = [
 ];
 
 const certifications = [
-
+  {
+    title: 'Learn TypeScript',
+    issuer: 'Scrimba',
+    link: 'https://www.coursera.org/account/accomplishments/verify/J56TCTS64GZU?utm_source=link&utm_medium=certificate&utm_content=cert_image&utm_campaign=sharing_cta&utm_product=course'
+  },
+  {
+    title: 'Programming with JavaScript',
+    issuer: 'Meta',
+    link: 'https://www.coursera.org/account/accomplishments/verify/CHS21TROS95J'
+  },
   {
     title: 'Neo4j Fundamentals',
     issuer: 'Neo4j',
