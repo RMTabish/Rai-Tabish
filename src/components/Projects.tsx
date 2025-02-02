@@ -6,7 +6,7 @@ const projects = [
     title: "DataKaleidos (FYP)",
     description: "An GraphRAG driven data analytics tool which entertain the user queries about the CPG industries and respond to them with insights, visualizations and suggestions along with ability to scrape large scale data from all around internet (USER: In my Islamabad store what item should should i start selling more? DataKaleidos: Based on your user review and sales history the best product to sell in islamabad is burgers, here is a Graph chart that shows how its sales grew over the past 2 months ).",
     technologies: ["Python","Natural Language Processing (NLP)", "Apache Airflow","Web Scraping","LAMA-3","Knowledge Graphs","Kubernetes","Amazon Web Services (AWS)", "ETL", "Neo4j"],
-    imageUrl: `${import.meta.env.BASE_URL}/DataKal.png`,
+    imageUrl: `/DataKal.png`,
     github: "https://www.linkedin.com/posts/rai-muhammad-tabish_datascience-nlp-webscraping-activity-7253391747341312000-VdbO",
     features: ["NLP-Driven Query Interface","Custom Visualizations and Reporting","Sentiment Analysis and Trend Prediction","Integrated Historical and Real-Time Insights"]
   },
@@ -14,7 +14,7 @@ const projects = [
     title: "FLIR Lepton Camera Control and Viewer",
     description: "Developed a Python-based thermal camera viewer for FLIR Lepton with advanced features like radiometry, manual FFC, PiP freeze frame, and GPU-optimized image processing using cuda, delivered as an auto-launching Ubuntu application.",
     technologies: ["Python", "OpenCV", "Lepton UVC Control","CUDA","PyQt","Thermal Cameras"],
-    imageUrl: `${import.meta.env.BASE_URL}/lepton.jpeg`,
+    imageUrl: `/lepton.jpeg`,
     /*Thermal Imaging: "https://github.com/RMTabish/food-slicer",*/
     features: ["Thermal Imaging","Picture-in-Picture (PiP) Mode","GPU-Enhanced Image Processing"]
   },
@@ -34,7 +34,7 @@ const projects = [
     title: "Brick Breaker Game in Assembly Language (x86 MASM)",
     description: "A graphical Brick Breaker game implemented in x86 Assembly Language using Microsoft Macro Assembler (MASM). The game features colorful graphics, sound effects, multiple levels, and responsive controls, offering an engaging experience while demonstrating low-level programming concepts.",
     technologies: ["x86 Assembly", "MASM", "DOSBox Emulator", "Low-Level Programming", "Graphics Programming"],
-    imageUrl: `${import.meta.env.BASE_URL}/brickBreaker.jpg`,
+    imageUrl: `/brickBreaker.jpg`,
     features: [
       "Colorful graphics created using assembly code",
       "Basic sound effects for an enhanced experience",
@@ -53,7 +53,7 @@ const projects = [
     title: "Food Slicer",
     description: "A user frienldy 3D game developed in Using Unity engine and blender to design the assests.",
     technologies: ["Unity3D", "C#", "Blender","OOP"],
-    imageUrl: `${import.meta.env.BASE_URL}/slicer.jpg`,
+    imageUrl: `/slicer.jpg`,
     github: "https://github.com/RMTabish/food-slicer",
     features: ["3D"]
   },
@@ -61,7 +61,7 @@ const projects = [
     title: "Car Rental Website",
     description: "Developed a responsive car rental platform using MERN enabling secure bookings, vehicle listings, and seamless user experience across devices.",
     technologies: ["REACT.js", "MongoDB", "Express","HTML","CSS","JavaScript"],
-    imageUrl: `${import.meta.env.BASE_URL}/carrent3.jpg`,
+    imageUrl: `/carrent3.jpg`,
     github: "https://github.com/Web-Project-CarRental/Web-Project-CarRental.github.io",
     features: ["Car Booking System", "Vehicle Listing for Owners", "Responsive design"]
   },
@@ -75,7 +75,7 @@ const projects = [
   {
     title: "Fast Society Management System",
     description: "A comprehensive management system Societies with consistement database management for universities to mange there club's announcments and members and to streamline the organization process.",
-    imageUrl: `${import.meta.env.BASE_URL}/societymng.png`,
+    imageUrl: `/societymng.png`,
     github: "https://github.com/RMTabish/Fast-Society-Management-s",
     technologies: ["C#","Database Design","Window forms","Google forms", "SQL Server"]
   }
