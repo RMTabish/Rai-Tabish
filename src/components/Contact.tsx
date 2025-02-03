@@ -1,113 +1,121 @@
 import { motion } from 'framer-motion';
-import { Mail, Phone, MapPin, Send } from 'lucide-react';
-import { useState } from 'react';
+import { Mail, Phone } from 'lucide-react';
+import { useState, useEffect } from 'react';
+import emailjs from '@emailjs/browser';
 
 export default function Contact() {
-  const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    message: ''
-  });
+  const [formData, setFormData] = useState({ name: '', email: '', message: '' });
+  const [status, setStatus] = useState('');
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    // Handle form submission
-    console.log(formData);
+
+    const serviceId = "service_h28v3da"; 
+    const templateId = "template_dczc13o"; 
+    const publicKey = "chW7ecdWa1ovo0p6m"; 
+
+    const templateParams = {
+      from_name: formData.name,
+      from_email: formData.email,
+      message: formData.message,
+    };
+
+    try {
+      await emailjs.send(serviceId, templateId, templateParams, publicKey);
+      setStatus('Message sent, Rai Will contact to you shortly!');
+      setFormData({ name: '', email: '', message: '' });
+    } catch (error) {
+      console.error('Error sending email:', error);
+      setStatus('Something is wrong Jessi, please sending an email');
+    }
   };
 
+  useEffect(() => {
+    const audio = new Audio('/bettersong.mp3'); // Make sure this file is in the `public` folder
+    audio.play();
+
+    return () => {
+      audio.pause();
+      audio.currentTime = 0; // Reset audio when leaving the page
+    };
+  }, []);
   return (
-    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-      <motion.div
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.6 }}
-        className="grid grid-cols-1 md:grid-cols-2 gap-12"
-      >
-        <div>
-          <h2 className="text-3xl font-bold text-gray-900 mb-8">Get in Touch</h2>
-          <div className="space-y-6">
-            <div className="flex items-center">
-              <Mail className="h-6 w-6 text-blue-600 mr-4" />
-              <div>
-                <p className="text-sm text-gray-600">Email</p>
-                <a href="mailto:raimuhammadtabish@gmail.com" className="text-gray-900 hover:text-blue-600">
-                  raimuhammadtabish@gmail.com
-                </a>
-              </div>
+    <div className="min-h-screen flex flex-col items-center justify-center bg-yellow-500 text-black p-6">
+      <div className="flex flex-col md:flex-row items-center max-w-5xl w-full">
+        {/* Left Content */}
+        <div className="md:w-1/2 text-center md:text-left p-6">
+          <h1 className="text-6xl font-extrabold text-red-600 italic mb-4 md:whitespace-nowrap" style={{ fontFamily: 'Dancing Script, cursive' }}>
+            "Better Call Rai!"
+          </h1>
+          <p className="text-xl font-bold" style={{ fontFamily: 'Dancing Script, cursive' }}>
+            "In Code Trouble? I Can Help!"
+          </p>
+          <div className="mt-6 text-center md:text-left">
+            <div className="flex items-center justify-center md:justify-start mb-3">
+              <Phone className="h-6 w-6 text-red-600 mr-2" />
+              <a href="tel:+923039222567" className="text-lg font-bold">+92 303 9222567</a>
             </div>
-            <div className="flex items-center">
-              <Phone className="h-6 w-6 text-blue-600 mr-4" />
-              <div>
-                <p className="text-sm text-gray-600">Phone</p>
-                <a href="tel:+923039222567" className="text-gray-900 hover:text-blue-600">
-                  +92 303 9222567
-                </a>
-              </div>
-            </div>
-            <div className="flex items-center">
-              <MapPin className="h-6 w-6 text-blue-600 mr-4" />
-              <div>
-                <p className="text-sm text-gray-600">Location</p>
-                <p className="text-gray-900">Islamabad, Pakistan</p>
-              </div>
+            <div className="flex items-center justify-center md:justify-start mb-3">
+              <Mail className="h-6 w-6 text-red-600 mr-2" />
+              <a href="mailto:raimuhammadtabish@gmail.com" className="text-lg font-bold">raimuhammadtabish@gmail.com</a>
             </div>
           </div>
         </div>
 
+        {/* Right Image */}
         <motion.div
           initial={{ opacity: 0, x: 20 }}
           animate={{ opacity: 1, x: 0 }}
-          transition={{ delay: 0.2, duration: 0.6 }}
+          transition={{ duration: 0.6 }}
+          className="md:w-1/2 p-6 flex justify-center"
         >
-          <form onSubmit={handleSubmit} className="space-y-6">
-            <div>
-              <label htmlFor="name" className="block text-sm font-medium text-gray-700">
-                Name
-              </label>
-              <input
-                type="text"
-                id="name"
-                value={formData.name}
-                onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500"
-                required
-              />
-            </div>
-            <div>
-              <label htmlFor="email" className="block text-sm font-medium text-gray-700">
-                Email
-              </label>
-              <input
-                type="email"
-                id="email"
-                value={formData.email}
-                onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500"
-                required
-              />
-            </div>
-            <div>
-              <label htmlFor="message" className="block text-sm font-medium text-gray-700">
-                Message
-              </label>
-              <textarea
-                id="message"
-                rows={4}
-                value={formData.message}
-                onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-                className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500"
-                required
-              />
-            </div>
-            <button
-              type="submit"
-              className="inline-flex items-center px-4 py-2 border border-transparent text-base font-medium rounded-md shadow-sm text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500"
-            >
-              <Send className="h-4 w-4 mr-2" />
-              Send Message
-            </button>
-          </form>
+          <img src="/better cal rai.png" alt="Better Call Rai" className="w-full max-w-sm md:max-w-md" />
         </motion.div>
+      </div>
+
+      {/* Contact Form */}
+      <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6 }}
+        className="mt-8 w-full max-w-lg bg-white p-6 rounded-lg shadow-lg"
+      >
+        <h2 className="text-2xl font-bold text-red-600 mb-4 text-center">
+          Want to Hire the Best Developer? <br /> Let's Talk!
+        </h2>
+        <form onSubmit={handleSubmit} className="space-y-4">
+          <input
+            type="text"
+            placeholder="Your Name"
+            className="w-full p-3 border border-gray-300 rounded-lg"
+            value={formData.name}
+            onChange={(e) => setFormData({ ...formData, name: e.target.value })}
+            required
+          />
+          <input
+            type="email"
+            placeholder="Your Email"
+            className="w-full p-3 border border-gray-300 rounded-lg"
+            value={formData.email}
+            onChange={(e) => setFormData({ ...formData, email: e.target.value })}
+            required
+          />
+          <textarea
+            placeholder="Your Message"
+            className="w-full p-3 border border-gray-300 rounded-lg"
+            rows="4"
+            value={formData.message}
+            onChange={(e) => setFormData({ ...formData, message: e.target.value })}
+            required
+          />
+          <button
+            type="submit"
+            className="w-full bg-red-600 text-white py-3 rounded-lg font-bold hover:bg-red-700 transition"
+          >
+            Send Message
+          </button>
+        </form>
+        {status && <p className="text-center mt-3 text-lg font-bold">{status}</p>}
       </motion.div>
     </div>
   );

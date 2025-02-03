@@ -79,6 +79,21 @@ const education = [
 
 const certifications = [
   {
+    title: 'Machine Learning Specialization ',
+    issuer: 'Stanford',
+    link: ''
+  },
+  {
+    title: 'AWS Fundamenetals Specialization',
+    issuer: 'AWS',
+    link: ''
+  },
+  {
+    title: 'Generative-AI with LLM',
+    issuer: 'AWS',
+    link: ''
+  },
+  {
     title: 'Learn TypeScript',
     issuer: 'Scrimba',
     link: 'https://www.coursera.org/account/accomplishments/verify/J56TCTS64GZU?utm_source=link&utm_medium=certificate&utm_content=cert_image&utm_campaign=sharing_cta&utm_product=course'
