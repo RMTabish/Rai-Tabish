@@ -3,59 +3,11 @@ import { Briefcase, GraduationCap } from 'lucide-react';
 import ParticlesBackground from './ParticlesBackground';
 const experiences = [
   {
-    title: "Technology Developer",
-    company: "Knodemy",
-    duration: "September 2024 - January-2025",
+    title: "CEO & Co-Founder",
+    company: "Anviro",
+    duration: "2025 - Present",
     description:
-      "At Knodemy, I worked as a Full Stack Developer, contributing to the development of a Learning Management System (LMS). My role involved designing the architecture of the LMS and using the MERN stack to build its features. Additionally, I gained hands-on experience with AWS during the deployment phase, which enhanced my skills in software development. I had the privilege of collaborating with an exceptional team, which fostered both personal and professional growth. One of the most rewarding aspects of my role was mentoring young talent from underprivileged schools in Pakistan, helping them develop technical skills and fostering their potential.",
-    type: "work",
-  },
-  {
-    title: "Freelancer",
-    company: "Fiverr",
-    duration: "January 2023 - Present",
-    description:
-      "Completed 15+ projects in image processing, .NET desktop applications (C++, C#, OpenCV, Python). Achieved consistent 5-star ratings, earning a Level 1 badge within one month.",
-    type: "work",
-  },
-  {
-    title: "CS Lab Demonstrator",
-    company: "FAST NUCES, Islamabad",
-    duration: "Sep 2024 - Jan 2024",
-    description:
-      "Taught Programming Fundamentals to over 50 first-year students, assisting with course design and evaluation. Guided students in algorithm development and provided hands-on practice with Linux OS and C++ programming.",
-    type: "work",
-  },
-  {
-    title: "Head of Sponsorship",
-    company: "FAST Computing Society",
-    duration: "January 2023 - January 2024",
-    description:
-      "Curated the sponsorship team, designed proposals, and liaised with potential sponsors. Collaborated with other teams to organize hackathons and events throughout 2023-2024.",
-    type: "work",
-  },
-  {
-    title: "Member",
-    company: "FAST Literary Society",
-    duration: "Sep 2021 - Dec 2023",
-    description:
-      "Actively participated in organizing literary events and fostering a collaborative environment for members. Supported event planning and engagement initiatives to promote literary activities on campus.",
-    type: "work",
-  },
-  {
-    title: "Android Development Intern",
-    company: "Code Knitters – NSTP, Islamabad",
-    duration: "May 2023 - Jul 2023",
-    description:
-      "Developed an Android dictionary app with Kotlin and Android Studio, integrating API for definitions and synonyms. Gained experience with Kotlin, version control (Git), and collaboration in a startup environment.",
-    type: "work",
-  },
-  {
-    title: "CS Lab Demonstrator",
-    company: "FAST NUCES, Islamabad",
-    duration: "January 2023 - November 2023",
-    description:
-      "Guided students retaking Programming Fundamentals, focusing on C++ and Linux OS. Adapted teaching style to diverse learning needs, improving students’ programming and problem-solving skills.",
+      "Co-Founded Anviro, a Custom Software and AI development company that helps businesses 10x their productivity.",
     type: "work",
   },
 ];
@@ -65,14 +17,7 @@ const education = [
     title: "Bachelor of Science in Computer Science",
     institution: "FAST NUCES",
     duration: "Sep-2021 - May-2025",
-    description: "Relevant Courses: Artificial Intelligence, Statistical Modeling, Blockchain, Data Engineering, Database Management,Computer Networks, Information and security, Ethical Hacking, Data Structures & Algorithms, OOP, Operating Systems,C++ Program Design, Database Management Systems.",
-    type: "education",
-  },
-  {
-    title: "Fellow of Science in Pre-Engineering",
-    institution: "I-M-C-B 1-8/3",
-    duration: "Jan-2019 - June-2021",
-    //description: "Relevant Courses: Artificial Intelligence, Statistical Modeling, Blockchain, Data Engineering, Database Management,Computer Networks, Information and security, Ethical Hacking, Data Structures & Algorithms, OOP, Operating Systems,C++ Program Design, Database Management Systems.",
+    description: "Driven by a passion for computers and inspired by the dot com boom, I pursued a bachelor's degree in computer science, embraced every challenge, and built a strong foundation in software and technology.",
     type: "education",
   },
 ];

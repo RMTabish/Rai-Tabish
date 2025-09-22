@@ -10,8 +10,7 @@ export default function Navbar() {
     { name: "Home", href: "/" },
     { name: "Projects", href: "/projects" },
     { name: "Experience", href: "/experience" },
-    { name: "Reviews", href: "/reviews" },
-    { name: "Contact", href: "/contact" },
+    { name: "Testimonials", href: "/testimonials" },
   ];
 
   return (
@@ -49,7 +48,7 @@ export default function Navbar() {
             <a href="https://www.linkedin.com/in/rai-muhammad-tabish/" className="text-gray-300 hover:text-blue-400">
               <Linkedin className="h-5 w-5" />
             </a>
-            <a href="mailto:raimuhammadtabish@gmail.com" className="text-gray-300 hover:text-blue-400">
+            <a href="mailto:ra.tabish@anviro.net" className="text-gray-300 hover:text-blue-400">
               <Mail className="h-5 w-5" />
             </a>
           </div>
@@ -93,7 +92,7 @@ export default function Navbar() {
               <a href="https://www.linkedin.com/in/rai-muhammad-tabish/" className="text-gray-300 hover:text-blue-400">
                 <Linkedin className="h-5 w-5" />
               </a>
-              <a href="mailto:raimuhammadtabish@gmail.com" className="text-gray-300 hover:text-blue-400">
+              <a href="mailto:ra.tabish@anviro.net" className="text-gray-300 hover:text-blue-400">
                 <Mail className="h-5 w-5" />
               </a>
             </div>

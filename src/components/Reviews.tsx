@@ -33,7 +33,7 @@ export default function Reviews() {
       <ParticlesBackground />
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }}>
-          <h2 className="text-3xl font-bold text-white mb-8">Client Reviews</h2>
+          <h2 className="text-3xl font-bold text-white mb-8">Client Testimonials</h2>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {reviews.map((review, index) => (

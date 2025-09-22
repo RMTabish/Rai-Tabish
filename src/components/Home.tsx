@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { motion } from 'framer-motion';
-import { Github, Linkedin, Mail, Phone, MessageCircle } from 'lucide-react';
+import { Github, Linkedin, Mail, MessageCircle } from 'lucide-react';
 import { useInView } from 'react-intersection-observer';
 import { Link } from 'react-router-dom';
 import ParticlesBackground from "../components/ParticlesBackground";
@@ -28,10 +28,13 @@ export default function Home() {
         >
           <div>
             <h1 className="text-4xl sm:text-5xl font-bold text-white mb-6">
-              Hi, I'm Rai Muhammad Tabish
+              Rai Muhammad Tabish
             </h1>
-            <p className="text-xl text-gray-400 mb-8">
-              A passionate Computer Scientist who gets things done.
+            <p className="text-xl text-gray-400 mb-6">
+              We all know what we've to do
+            </p>
+            <p className="text-lg text-blue-400 mb-8">
+              CEO and Co-Founder of Anviro, I love to build.
             </p>
             <div className="flex space-x-6">
               <a href="https://github.com/RMTabish" className="text-gray-400 hover:text-blue-400">
@@ -40,11 +43,8 @@ export default function Home() {
               <a href="https://www.linkedin.com/in/rai-muhammad-tabish/" className="text-gray-400 hover:text-blue-400">
                 <Linkedin className="h-6 w-6" />
               </a>
-              <a href="mailto:raimuhammadtabish@gmail.com" className="text-gray-400 hover:text-blue-400">
+              <a href="mailto:ra.tabish@anviro.net" className="text-gray-400 hover:text-blue-400">
                 <Mail className="h-6 w-6" />
-              </a>
-              <a href="tel:+923039222567" className="text-gray-400 hover:text-blue-400">
-                <Phone className="h-6 w-6" />
               </a>
             </div>
           </div>
@@ -65,13 +65,6 @@ export default function Home() {
               <span className="mr-2">View My Work</span>
             </div>
           </Link>
-          <a
-            href="/Rai Tabish FAST-NUCES-ISB.pdf"
-            download="Rai Tabish FAST-NUCES.pdf"
-            className="inline-flex items-center px-4 py-2 mt-4 border border-gray-600 text-white rounded-full hover:bg-gray-600 hover:text-white transition-colors duration-200 cursor-pointer group"
-          >
-            <span className="mr-2">Download Resume</span>
-          </a>
         </div>
       </div>
 
