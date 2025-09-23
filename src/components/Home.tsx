@@ -6,6 +6,7 @@ import { Link } from 'react-router-dom';
 import ParticlesBackground from "../components/ParticlesBackground";
 import Chatbot from "./Chatbot";
 
+
 export default function Home() {
   const [ref, inView] = useInView({ triggerOnce: true, threshold: 0.1 });
   const [showChat, setShowChat] = useState(false);
