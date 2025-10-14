@@ -75,7 +75,7 @@ export default function Reviews() {
               rel="noopener noreferrer"
               className="inline-flex items-center px-6 py-3 border border-blue-500 text-blue-400 rounded-full hover:bg-blue-500 hover:text-white hover:border-blue-400 transition-colors duration-200"
             >
-              <span className="mr-2">See More Reviews on Fiverr</span>
+              <span className="mr-2">See More Reviews</span>
               <ExternalLink className="h-4 w-4" />
             </a>
           </motion.div>

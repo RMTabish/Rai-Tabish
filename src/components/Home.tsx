@@ -1,15 +1,12 @@
-import { useState } from 'react';
 import { motion } from 'framer-motion';
-import { Github, Linkedin, Mail, MessageCircle } from 'lucide-react';
+import { Github, Linkedin, Mail, ExternalLink, Building2 } from 'lucide-react';
 import { useInView } from 'react-intersection-observer';
 import { Link } from 'react-router-dom';
-import ParticlesBackground from "../components/ParticlesBackground";
-import Chatbot from "./Chatbot";
+import ParticlesBackground from "./ParticlesBackground";
 
 
 export default function Home() {
   const [ref, inView] = useInView({ triggerOnce: true, threshold: 0.1 });
-  const [showChat, setShowChat] = useState(false);
 
   const containerVariants = {
     hidden: { opacity: 0, y: 20 },
@@ -32,19 +29,35 @@ export default function Home() {
               Rai Muhammad Tabish
             </h1>
             <p className="text-xl text-gray-400 mb-6">
-              We all know what we've to do
+              CEO & Co-Founder
             </p>
             <p className="text-lg text-blue-400 mb-8">
-              CEO and Co-Founder of Anviro, I love to build.
+              Building, Refining and Perfecting.
             </p>
+            
+            {/* Company Link */}
+            <div className="mb-8">
+              <a 
+                href="https://anviro.net" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="inline-flex items-center px-6 py-3 bg-blue-600 text-white rounded-full hover:bg-blue-700 transition-colors duration-200 group"
+              >
+                <Building2 className="h-5 w-5 mr-2" />
+                <span>Visit Anviro</span>
+                <ExternalLink className="h-4 w-4 ml-2 group-hover:translate-x-1 transition-transform" />
+              </a>
+            </div>
+
+            {/* Social Links */}
             <div className="flex space-x-6">
-              <a href="https://github.com/RMTabish" className="text-gray-400 hover:text-blue-400">
+              <a href="https://github.com/RMTabish" className="text-gray-400 hover:text-blue-400 transition-colors">
                 <Github className="h-6 w-6" />
               </a>
-              <a href="https://www.linkedin.com/in/rai-muhammad-tabish/" className="text-gray-400 hover:text-blue-400">
+              <a href="https://www.linkedin.com/in/rai-muhammad-tabish/" className="text-gray-400 hover:text-blue-400 transition-colors">
                 <Linkedin className="h-6 w-6" />
               </a>
-              <a href="mailto:ra.tabish@anviro.net" className="text-gray-400 hover:text-blue-400">
+              <a href="mailto:ra.tabish@anviro.net" className="text-gray-400 hover:text-blue-400 transition-colors">
                 <Mail className="h-6 w-6" />
               </a>
             </div>
@@ -62,30 +75,13 @@ export default function Home() {
 
         <div className="mt-16 text-center">
           <Link to="/projects">
-            <div className="inline-flex items-center px-4 py-2 border border-blue-600 text-blue-600 rounded-full hover:bg-blue-600 hover:text-white transition-colors duration-200 cursor-pointer group">
+            <div className="inline-flex items-center px-6 py-3 border border-blue-600 text-blue-600 rounded-full hover:bg-blue-600 hover:text-white transition-colors duration-200 cursor-pointer group">
               <span className="mr-2">View My Work</span>
+              <ExternalLink className="h-4 w-4 group-hover:translate-x-1 transition-transform" />
             </div>
           </Link>
         </div>
       </div>
-
-      {/* Chatbot Button */}
-      <button
-        onClick={(e) => {
-          e.stopPropagation(); // Prevents event conflicts
-          setShowChat(!showChat);
-        }}
-        className="fixed bottom-6 right-6 bg-blue-600 text-white p-4 rounded-full shadow-lg hover:bg-blue-700 transition z-50"
-      >
-        <MessageCircle className="h-6 w-6" />
-      </button>
-
-      {/* Chatbot Component */}
-      {showChat && (
-        <div className="fixed bottom-16 right-6 z-50">
-          <Chatbot onClose={() => setShowChat(false)} />
-        </div>
-      )}
     </div>
   );
 }
