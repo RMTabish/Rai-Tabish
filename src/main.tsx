@@ -18,6 +18,10 @@ const root = createRoot(document.getElementById("root")!);
 root.render(
   <StrictMode>
     <App />
-  </StrictMode>,
-  hideStartupLoader() // ✅ Call function immediately after React renders
+  </StrictMode>
 );
+
+// ✅ Wait for React to fully mount before hiding loader
+setTimeout(() => {
+  hideStartupLoader();
+}, 100);
